@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diabetes Prediction</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+ 
+</head>
+<body>
+  <div class="container">
+    <form action="/predict" method="POST">
+      <table>
+      <tr>
+        <td colspan="2" style="text-align: center;"><h1><p style="text-align: center; font-weight: bold;">{{ prediction }}</p><h1></td>
+      </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;"><h2>Diabetes Prediction Form</h2></td>
+        </tr>
+        <tr>
+          <td><label for="age">Age:</label></td>
+          <td><input type="number" id="age" name="age" required></td>
+        </tr>
+         <tr>
+        <td><label for="high-bp">High Blood Pressure:</label></td>
+        <td>
+          <select id="high-bp" name="high-bp" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="high-chol">High Cholesterol:</label></td>
+        <td>
+          <select id="high-chol" name="high-chol" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="chol-check">Cholesterol Check:</label></td>
+        <td>
+          <select id="chol-check" name="chol-check" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="bmi">BMI:</label></td>
+        <td><input type="number" id="bmi" name="bmi" required></td>
+      </tr>
+      <tr>
+        <td><label for="smoker">Smoker:</label></td>
+        <td>
+          <select id="smoker" name="smoker" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="stroke">Stroke:</label></td>
+        <td>
+          <select id="stroke" name="stroke" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="heart-disease">Heart Disease or Attack:</label></td>
+        <td>
+          <select id="heart-disease" name="heart-disease" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="phys-activity">Physical Activity (minutes per day):</label></td>
+        <td><input type="number" id="phys-activity" name="phys-activity" required></td>
+      </tr>
+      <tr>
+        <td><label for="fruits">Fruits Consumption (servings per day):</label></td>
+        <td><input type="number" id="fruits" name="fruits" required></td>
+      </tr>
+      <tr>
+        <td><label for="veggies">Vegetables Consumption (servings per day):</label></td>
+        <td><input type="number" id="veggies" name="veggies" required></td>
+      </tr>
+      <tr>
+        <td><label for="alcohol">Heavy Alcohol Consumption:</label></td>
+        <td>
+          <select id="alcohol" name="alcohol" required>
+            <option value="">Select an option</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="gen-health">General Health:</label></td>
+        <td><input type="number" id="gen-health" name="gen-health" required></td>
+      </tr>
+      <tr>
+        <td><label for="phys-health">Physical Health:</label></td>
+        <td><input type="number" id="phys-health" name="phys-health" required></td>
+      </tr>
+      <tr>
+        <td><label for="sex">Sex:</label></td>
+        <td>
+          <select id="sex" name="sex" required>
+            <option value="">Select an option</option>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+        </td>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <button type="submit" class="submit-btn">Predict</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  
+</body>
+</html>
